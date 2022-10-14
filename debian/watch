@@ -1,0 +1,73 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-sane-$1.tar.gz/ \
+ https://github.com/amasad/sane/releases .*/archive/v?([\d\.]+).tar.gz group
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=bser,pgpmode=none" \
+ https://registry.npmjs.org/bser https://registry.npmjs.org/bser/-/bser-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+opts=\
+ctype=nodejs,\
+component=capture-exit,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-capture-exit-$1.tar.gz/ \
+ https://github.com/stefanpenner/capture-exit/tags .*/archive/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=cnakazawa-watch,pgpmode=none" \
+ https://registry.npmjs.org/@cnakazawa/watch https://registry.npmjs.org/@cnakazawa/watch/-/watch-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+opts=\
+ctype=nodejs,\
+component=exec-sh,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-exec-sh-$1.tar.gz/ \
+ https://github.com/tsertkov/exec-sh/tags .*/archive/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=fb-watchman,pgpmode=none" \
+ https://registry.npmjs.org/fb-watchman https://registry.npmjs.org/fb-watchman/-/fb-watchman-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=makeerror,pgpmode=none" \
+ https://registry.npmjs.org/makeerror https://registry.npmjs.org/makeerror/-/makeerror-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+opts=\
+ctype=nodejs,\
+component=node-int64,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-node-int64-$1.tar.gz/ \
+ https://github.com/broofa/node-int64/tags .*/archive/v?([\d\.]+).tar.gz checksum
+
+opts=\
+ctype=nodejs,\
+component=rsvp,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-rsvp.js-$1.tar.gz/ \
+ https://github.com/tildeio/rsvp.js/tags .*/archive/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=tmpl,pgpmode=none" \
+ https://registry.npmjs.org/tmpl https://registry.npmjs.org/tmpl/-/tmpl-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,ctype=nodejs,component=walker,pgpmode=none" \
+ https://registry.npmjs.org/walker https://registry.npmjs.org/walker/-/walker-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-sane,ctype=nodejs,pgpmode=none" \
+ https://registry.npmjs.org/@types/sane https://registry.npmjs.org/@types/sane/-/sane-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-fb-watchman,ctype=nodejs,pgpmode=none" \
+ https://registry.npmjs.org/@types/fb-watchman https://registry.npmjs.org/@types/fb-watchman/-/fb-watchman-([\d\.]+)@ARCHIVE_EXT@ checksum

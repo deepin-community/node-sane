@@ -1,0 +1,22 @@
+Description: drop one test incompatible with node-execa ≥ 4
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-11-27
+
+--- a/capture-exit/test.js
++++ b/capture-exit/test.js
+@@ -489,14 +489,6 @@
+       throw new Error('Unexpected zero exit status for process.exit(1)');
+     }
+   });
+-
+-  it("status code from exit within procces.on('exit') handler trumps prior process.exit's", function() {
+-    return execa.shell('node process-exit-during-final-exit-subprocess.js').then(function(a) {
+-      expect(true, 'should not fulfill').to.eql(false);
+-    }, function(reason) {
+-      expect(reason.code).to.eql(1);
+-    });
+-  });
+ });
+ 
+ function delay(milliseconds) {

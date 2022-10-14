@@ -1,0 +1,46 @@
+Source: node-sane
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Xavier Guimard <yadd@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , chai <!nocheck>
+ , mocha <!nocheck>
+ , node-anymatch <!nocheck>
+ , node-execa <!nocheck>
+ , node-micromatch (>= 3.1.4) <!nocheck>
+ , node-minimist <!nocheck>
+ , node-rimraf <!nocheck>
+ , node-rollup-plugin-babel
+ , node-sinon <!nocheck>
+ , node-tmp
+ , rollup
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-sane
+Vcs-Git: https://salsa.debian.org/js-team/node-sane.git
+Homepage: https://github.com/amasad/sane
+Rules-Requires-Root: no
+
+Package: node-sane
+Architecture: all
+Depends: ${misc:Depends}
+ , node-anymatch
+ , node-execa
+ , node-micromatch (>= 3.1.4)
+ , node-minimist
+ , nodejs (>= 6)
+Provides: ${nodejs:Provides}
+Description: Nodejs fast, small, and reliable file system watcher
+ Sane aims to be fast, small, and reliable file system watcher. It does
+ that by:
+  * By default stays away from fs polling because it's very slow and cpu
+   intensive
+  * Uses `fs.watch` by default and sensibly works around the various issues
+  * Maintains a consistent API across different platforms
+  * Where `fs.watch` is not reliable you have the choice of using the following
+   alternatives:
+   * the facebook watchman library (embedded)
+   * the watchexec library (embedded)
+   * polling

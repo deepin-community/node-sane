@@ -1,0 +1,2 @@
+mkdir -p dist
+rollup -f cjs -o dist/rsvp.js -b @rollup/plugin-babel lib/rsvp.js

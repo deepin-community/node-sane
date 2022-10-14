@@ -1,0 +1,24 @@
+{
+    "name": "@types/sane",
+    "version": "2.0.0",
+    "description": "TypeScript definitions for sane",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "BendingBender",
+            "url": "https://github.com/BendingBender"
+        }
+    ],
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/node": "*"
+    },
+    "peerDependencies": {},
+    "typesPublisherContentHash": "f86255aaae4a445ffe89ab13cf341d282d70a3833b05bb7c8e17f195709c7907",
+    "typeScriptVersion": "2.0"
+}
