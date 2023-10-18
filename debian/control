@@ -1,6 +1,6 @@
 Source: node-sane
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Uploaders: Xavier Guimard <yadd@debian.org>
+Uploaders: Yadd <yadd@debian.org>
 Section: javascript
 Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
@@ -17,7 +17,7 @@ Build-Depends: debhelper-compat (= 13)
  , node-sinon <!nocheck>
  , node-tmp
  , rollup
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-sane
 Vcs-Git: https://salsa.debian.org/js-team/node-sane.git
 Homepage: https://github.com/amasad/sane
@@ -30,7 +30,7 @@ Depends: ${misc:Depends}
  , node-execa
  , node-micromatch (>= 3.1.4)
  , node-minimist
- , nodejs (>= 6)
+ , nodejs:any
 Provides: ${nodejs:Provides}
 Description: Nodejs fast, small, and reliable file system watcher
  Sane aims to be fast, small, and reliable file system watcher. It does

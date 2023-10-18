@@ -5,12 +5,12 @@
 This package contains type definitions for sane (https://github.com/amasad/sane).
 
 # Details
-Files were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/sane
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/sane.
 
-Additional Details
- * Last updated: Mon, 14 Aug 2017 19:47:58 GMT
- * Dependencies: events, fs, node
+### Additional Details
+ * Last updated: Tue, 06 Jul 2021 16:34:13 GMT
+ * Dependencies: [@types/node](https://npmjs.com/package/@types/node)
  * Global values: none
 
 # Credits
-These definitions were written by BendingBender <https://github.com/BendingBender>.
+These definitions were written by [BendingBender](https://github.com/BendingBender).

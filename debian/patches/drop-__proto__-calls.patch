@@ -1,0 +1,38 @@
+Description: drop __proto__ calls
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2022-12-01
+
+--- a/rsvp/lib/rsvp/node.js
++++ b/rsvp/lib/rsvp/node.js
+@@ -225,7 +225,7 @@
+     }
+   };
+ 
+-  fn.__proto__ = nodeFunc;
++  Object.setPrototypeOf(fn, nodeFunc);
+ 
+   return fn;
+ }
+--- a/src/watchman_watcher.js
++++ b/src/watchman_watcher.js
+@@ -37,7 +37,7 @@
+   this._init();
+ }
+ 
+-WatchmanWatcher.prototype.__proto__ = EventEmitter.prototype;
++Object.setPrototypeOf(WatchmanWatcher.prototype, EventEmitter.prototype);
+ 
+ /**
+  * Run the watchman `watch` command on the root and subscribe to changes.
+--- a/test/plugin_watcher.js
++++ b/test/plugin_watcher.js
+@@ -51,7 +51,7 @@
+   );
+ }
+ 
+-PluginTestWatcher.prototype.__proto__ = EventEmitter.prototype;
++Object.setPrototypeOf(PluginTestWatcher.prototype, EventEmitter.prototype);
+ 
+ /**
+  * Given a fullpath of a file or directory check if we need to watch it.

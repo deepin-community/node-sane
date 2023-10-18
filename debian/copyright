@@ -32,7 +32,7 @@ Copyright: 2010-2011 Mikeal Rogers
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2020, Xavier Guimard <yadd@debian.org>
+Copyright: 2020, Yadd <yadd@debian.org>
 License: Expat
 
 Files: exec-sh/*
