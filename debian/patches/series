@@ -1,1 +1,2 @@
 fix-for-execa-4.patch
+drop-__proto__-calls.patch

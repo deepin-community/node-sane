@@ -47,18 +47,18 @@ Exit code:  99
 ## Usage
 
 ```javascript
-var execSh = require("../");
+const execSh = require("../");
 
 // run interactive bash shell
-execSh("echo lorem && bash", { cwd: "/home" }, function(err){
+execSh("echo lorem && bash", { cwd: "/home" }, (err) => {
   if (err) {
     console.log("Exit code: ", err.code);
     return;
   }
 
   // collect streams output
-  var child = execSh(["bash -c id", "echo lorem >&2"], true,
-    function(err, stdout, stderr){
+  const child = execSh(["bash -c id", "echo lorem >&2"], true,
+    (err, stdout, stderr) => {
       console.log("error: ", err);
       console.log("stdout: ", stdout);
       console.log("stderr: ", stderr);
@@ -69,7 +69,7 @@ execSh("echo lorem && bash", { cwd: "/home" }, function(err){
 ## Promise Interface
 
 ```javascript
-var execShPromise = require("exec-sh").promise;
+const execShPromise = require("exec-sh").promise;
 
 // run interactive bash shell
 const run = async () => {
@@ -114,7 +114,7 @@ Returns [ChildProcess](http://nodejs.org/api/child_process.html#child_process_cl
 Complete API Documentation including private and public methods is generated from source code by JSDoc tool and is [available here](https://s3.eu-central-1.amazonaws.com/tsertkov-artifacts/exec-sh/master/jsdoc/index.html).
 
 ## Code Coverage
-Code coverage report for all files is [available here](https://s3.eu-central-1.amazonaws.com/tsertkov-artifacts/exec-sh/master/coverage/index.html).
+Code coverage report for all files is [available here](https://s3.eu-central-1.amazonaws.com/tsertkov-artifacts/exec-sh/master/coverage/lcov-report/index.html).
 
 ## Scripts
 

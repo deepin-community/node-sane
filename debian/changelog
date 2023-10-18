@@ -1,3 +1,30 @@
+node-sane (4.1.0+~cs18.17.38-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ Yadd ]
+  * Drop __proto__ calls
+
+ -- Yadd <yadd@debian.org>  Thu, 01 Dec 2022 14:18:27 +0100
+
+node-sane (4.1.0+~cs18.17.38-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+  [ Yadd ]
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix debian/watch
+    * Fix GitHub tags regex
+    * Fix filenamemangle
+  * Update nodejs dependency to nodejs:any
+  * New upstream version 4.1.0+~cs18.17.38
+
+ -- Yadd <yadd@debian.org>  Sat, 20 Nov 2021 09:17:42 +0100
+
 node-sane (4.1.0+~cs18.16.37-1) unstable; urgency=medium
 
   [ Debian Janitor ]
